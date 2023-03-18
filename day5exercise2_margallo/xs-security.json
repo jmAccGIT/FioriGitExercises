@@ -1,0 +1,7 @@
+{
+  "xsappname": "day5exercise2margallo",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [],
+  "role-templates": []
+}
