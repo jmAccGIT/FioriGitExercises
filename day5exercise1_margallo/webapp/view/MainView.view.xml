@@ -1,0 +1,44 @@
+<mvc:View controllerName="day5exercise1margallo.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}" class="sapUiSmallMargin">
+                    <content>
+                        <f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout"
+                            labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false"
+                            emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1"
+                            columnsM="1" singleContainerFullSize="false">
+                            <f:toolbar>
+                                <Toolbar id="TB1">
+                                    <Title id="FormTitle" text="Personal Details" level="H4" titleStyle="H4" />
+                                </Toolbar>
+                            </f:toolbar>
+                            <f:content>
+                                <Label id="NameLabel" text="{i18n>Name}" />
+                                <Input id="NameInput" value="NULL" />
+                                <Label id="SurnameLabel" text="{i18n>Surname}" />
+                                <Input id="SurnameInput" value="NULL" />
+                                <Label id="AgeLabel" text="{i18n>Age}" />
+                                <Input id="AgeInput" value="NULL">
+                                <layoutData>
+                                    <l:GridData id="AgeLayout" span="XL2 L1 M3 S4" />
+                                </layoutData>
+                                </Input>
+                                <Label id="TechLabel" text="{i18n>Question}" />
+                                <Select id="TechInput" selectedKey="{Tech}">
+                                    <items>
+                                        <core:Item id="HANA" text="HANA" key="HANA" />
+                                        <core:Item id="SAPUI5" text="SAPUI5" key="SAPUI5" />
+                                        <core:Item id="ABAP" text="ABAP" key="ABAP" />
+                                    </items>
+                                </Select>
+                                <Button id="SendButton" type="Default" press="onSend" text="Send" />
+                            </f:content>
+                        </f:SimpleForm>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
