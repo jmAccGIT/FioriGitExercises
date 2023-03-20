@@ -44,17 +44,17 @@
             <Panel id="idPanel4" headerText="Product Details" class="sapUiResponsiveMargin" width="auto">
                 <form:SimpleForm id="idProductDetails">
                     <form:content>
-                        <Label text="ProductId" />
+                        <Label text="{i18n>ProductId}" />
                         <Input value="{ProductsModel>ProductID}" />
-                        <Label text="ProductName" />
+                        <Label text="{i18n>ProductName}" />
                         <Input value="{ProductsModel>ProductName}" />
-                        <Label text="QuantityPerUnit" />
+                        <Label text="{i18n>QuantityPerUnit}" />
                         <Input value="{ProductsModel>QuantityPerUnit}" />
-                        <Label text="UnitPrice" />
+                        <Label text="{i18n>UnitPrice}" />
                         <Input value="{ProductsModel>UnitPrice}" />
-                        <Label text="UnitsInStock" />
+                        <Label text="{i18n>UnitsInStock}" />
                         <Input value="{ProductsModel>UnitsInStock}" />
-                        <Label text="Discontinued" />
+                        <Label text="{i18n>Discontinued}" />
                         <Input value="{ProductsModel>Discontinued}" />
                     </form:content>
                 </form:SimpleForm>
