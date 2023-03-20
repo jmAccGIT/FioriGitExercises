@@ -1,0 +1,64 @@
+<mvc:View controllerName="sapips.training.jsonbinding.controller.JsonBinding" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel id="idPanel" headerText="Data Binding Basics" class="sapUiResponsiveMargin" width="auto">
+                <form:SimpleForm>
+                    <form:content>
+                        <Label text="EID" />
+                        <Input value="{/EID}" enabled="{/enabled}" />
+                        <Label text="Enabled" />
+                        <CheckBox selected="{/enabled}" />
+                    </form:content>
+                </form:SimpleForm>
+            </Panel>
+            <Panel id="idPanel2" headerText="Address Details" class="sapUiResponsiveMargin" width="auto">
+                <form:SimpleForm>
+                    <form:content>
+                        <Label text="Address" />
+                        <Text text="{/Address/Street} {/Address/Zip} {/Address/City} {/Address/Country}"
+                            class="sapUiSmallMarginBottom" />
+                        <Link text="Send Email" href="{ path: '/EID', formatter: '.formatter.formatMail'}" />
+                        <Label text="Sales Amount" />
+                        <Input class="sapUiSmallMarginBegin" enabled="{enabled}" maxLength="8"
+                            value="{ parts: [ {path: '/SalesAmount'}, {path: '/CurrencyCode'} ], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }" />
+                    </form:content>
+                </form:SimpleForm>
+            </Panel>
+            <Panel id="idPanel3" headerText="Aggregation Binding" class="sapUiResponsiveMargin" width="auto">
+                <List items="{ProductsModel>/Products}" mode="SingleSelectMaster" selectionChange="onSelectProduct">
+                    <items>
+                        <ObjectListItem title="{ProductsModel>ProductName}"
+                            number="{ parts: [ {path: 'ProductsModel>UnitPrice'}, 
+                                                {path: '/CurrencyCode'} ], 
+                                                type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }" numberUnit="{/CurrencyCode}">
+                            <ObjectAttribute text="{ProductsModel>QuantityPerUnit}" />
+                            <ObjectAttribute title="{i18n>currStockValue}"
+                                text="{ parts: [ {path: 'ProductsModel>UnitPrice'}, 
+                                                   {path: 'ProductsModel>UnitsInStock'}, 
+                                                   {path: '/CurrencyCode'} ], formatter: '.formatter.formatStockValue' }" />
+                        </ObjectListItem>
+                    </items>
+                </List>
+            </Panel>
+            <Panel id="idPanel4" headerText="Product Details" class="sapUiResponsiveMargin" width="auto">
+                <form:SimpleForm id="idProductDetails">
+                    <form:content>
+                        <Label text="ProductId" />
+                        <Input value="{ProductsModel>ProductID}" />
+                        <Label text="ProductName" />
+                        <Input value="{ProductsModel>ProductName}" />
+                        <Label text="QuantityPerUnit" />
+                        <Input value="{ProductsModel>QuantityPerUnit}" />
+                        <Label text="UnitPrice" />
+                        <Input value="{ProductsModel>UnitPrice}" />
+                        <Label text="UnitsInStock" />
+                        <Input value="{ProductsModel>UnitsInStock}" />
+                        <Label text="Discontinued" />
+                        <Input value="{ProductsModel>Discontinued}" />
+                    </form:content>
+                </form:SimpleForm>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
