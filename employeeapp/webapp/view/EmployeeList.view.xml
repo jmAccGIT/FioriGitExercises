@@ -1,0 +1,76 @@
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table id="employeeListTab"
+                inset="true"
+                mode ="MultiSelect"
+                growing="true"
+                growingThreshold="10"
+                items="{path: '/EmployeeList'}"
+                class="sapUiResponsiveMargin"
+                width="auto">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="Employees" level="H2"/>
+                    <ToolbarSpacer/>
+                    <SearchField search="onSearch" width="17.5rem"/>
+                    <Button
+                            tooltip="Filter"
+                            icon="sap-icon://filter"
+                            press="handleFilterButtonPressed"/>                 
+                    <Button id="addEmployee" text="Add"/>
+                    <Button id="deleteEmployee" type="Reject" text="Delete"  enabled="false"/>                    
+                </OverflowToolbar>
+            </headerToolbar>    
+            <columns>
+                <Column width="12em">
+                    <Text text="{i18n>empID}"/>
+                </Column>
+                <Column demandPopin="true">
+                    <Text text="{i18n>firstName}"/>
+                </Column>
+                <Column width="auto" demandPopin="true">
+                    <Text text="{i18n>lastName}"/>
+                </Column>
+                <Column width="auto" demandPopin="true">
+                    <Text text="{i18n>age}"/>
+                </Column>
+                <Column width="auto" demandPopin="true">
+                    <Text text="{i18n>dateOfHire}"/>
+                </Column>
+                <Column width="auto" demandPopin="true">
+                    <Text text="{i18n>careerLevel}"/>
+                </Column>
+                <Column width="auto" demandPopin="true">
+                    <Text text="{i18n>currProject}"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onListItemPress" vAlign="Middle">
+                    <cells>
+                        <Text text="{EmployeeID}" />
+                    </cells>
+                    <cells>
+                        <Text text="{FirstName}" />
+                    </cells>
+                    <cells>
+                        <Text text="{LastName}" />
+                    </cells>
+                    <cells>
+                        <Text text="{Age}" />
+                    </cells>
+                    <cells>
+                        <Text text="{DateOfHire}" />
+                    </cells>
+                    <cells>
+                        <Text text="{CareerLevel}" />
+                    </cells>
+                    <cells>
+                        <Text text="{CurrentProject}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

@@ -1,0 +1,7 @@
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="123">
+        <Text text="1234"/>
+    </Page>
+</mvc:View>
