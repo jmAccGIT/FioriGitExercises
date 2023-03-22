@@ -7,7 +7,7 @@
                 mode ="MultiSelect"
                 growing="true"
                 growingThreshold="10"
-                items="{path: '/EmployeeList'}"
+                items="{path: '/Employee'}"
                 class="sapUiResponsiveMargin"
                 width="auto">
             <headerToolbar>

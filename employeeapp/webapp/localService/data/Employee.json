@@ -1,0 +1,182 @@
+[
+    {
+        "EmployeeID": "WGsdLuJvAlRQyFEGMWcIRIyEfijKCaex",
+        "FirstName": "FirstName1",
+        "LastName": "LastName1",
+        "Age": 29060,
+        "DateOfHire": "/Date(1341420586000)/",
+        "CareerLevel": "C1",
+        "CurrentProject": "CurrentProject1"
+    },
+    {
+        "EmployeeID": "PKUfnjordtnmEevjxWHuXbMOPtsgZOov",
+        "FirstName": "FirstName2",
+        "LastName": "LastName2",
+        "Age": 3675,
+        "DateOfHire": "/Date(211749822000)/",
+        "CareerLevel": "C2",
+        "CurrentProject": "CurrentProject2"
+    },
+    {
+        "EmployeeID": "YLygsQPpgQeTpQbYKMCCdWGstKsUGMRz",
+        "FirstName": "FirstName3",
+        "LastName": "LastName3",
+        "Age": 5047,
+        "DateOfHire": "/Date(895603155000)/",
+        "CareerLevel": "C3",
+        "CurrentProject": "CurrentProject3"
+    },
+    {
+        "EmployeeID": "EhYLbhnOqLtTLSSiaBQEjdhAyhWjJhdt",
+        "FirstName": "FirstName4",
+        "LastName": "LastName4",
+        "Age": 8923,
+        "DateOfHire": "/Date(861829469000)/",
+        "CareerLevel": "C4",
+        "CurrentProject": "CurrentProject4"
+    },
+    {
+        "EmployeeID": "FAIsFKaQCjyoHviAUKvvMboObPiRdNoJ",
+        "FirstName": "FirstName5",
+        "LastName": "LastName5",
+        "Age": 10256,
+        "DateOfHire": "/Date(379072934000)/",
+        "CareerLevel": "C5",
+        "CurrentProject": "CurrentProject5"
+    },
+    {
+        "EmployeeID": "GXdOblNfciZjKGFwxjNwNCLMnDXYPSyX",
+        "FirstName": "FirstName6",
+        "LastName": "LastName6",
+        "Age": 18862,
+        "DateOfHire": "/Date(1051976054000)/",
+        "CareerLevel": "C6",
+        "CurrentProject": "CurrentProject6"
+    },
+    {
+        "EmployeeID": "eWRoTHIQlDPVNFezXaqWbuZGfQyIEqfX",
+        "FirstName": "FirstName7",
+        "LastName": "LastName7",
+        "Age": 22598,
+        "DateOfHire": "/Date(137279023000)/",
+        "CareerLevel": "C7",
+        "CurrentProject": "CurrentProject7"
+    },
+    {
+        "EmployeeID": "WiSAuVAfCEMkOGluQPuunVbDWniZYqBI",
+        "FirstName": "FirstName8",
+        "LastName": "LastName8",
+        "Age": 26997,
+        "DateOfHire": "/Date(464560011000)/",
+        "CareerLevel": "C8",
+        "CurrentProject": "CurrentProject8"
+    },
+    {
+        "EmployeeID": "sKZckHYuNVvXrJyMdQPIxqCrkodLpFhk",
+        "FirstName": "FirstName9",
+        "LastName": "LastName9",
+        "Age": 21817,
+        "DateOfHire": "/Date(1437205457000)/",
+        "CareerLevel": "C9",
+        "CurrentProject": "CurrentProject9"
+    },
+    {
+        "EmployeeID": "UTceRUMzHOfzaZRniqRnGzhOAPsySwbd",
+        "FirstName": "FirstName10",
+        "LastName": "LastName10",
+        "Age": 23210,
+        "DateOfHire": "/Date(699764395000)/",
+        "CareerLevel": "10",
+        "CurrentProject": "CurrentProject10"
+    },
+    {
+        "EmployeeID": "ZYLBKnsgPiLvBcBgsMRctYcHybtKJckv",
+        "FirstName": "FirstName11",
+        "LastName": "LastName11",
+        "Age": 12671,
+        "DateOfHire": "/Date(1145471086000)/",
+        "CareerLevel": "11",
+        "CurrentProject": "CurrentProject11"
+    },
+    {
+        "EmployeeID": "bQdkKDygHHIupxGoLDkTBWglRjoPtXTI",
+        "FirstName": "FirstName12",
+        "LastName": "LastName12",
+        "Age": 3707,
+        "DateOfHire": "/Date(830759765000)/",
+        "CareerLevel": "12",
+        "CurrentProject": "CurrentProject12"
+    },
+    {
+        "EmployeeID": "iRnZFnYMVjKobZXTPxRXBvisEYeeMnBr",
+        "FirstName": "FirstName13",
+        "LastName": "LastName13",
+        "Age": 9112,
+        "DateOfHire": "/Date(38997445000)/",
+        "CareerLevel": "13",
+        "CurrentProject": "CurrentProject13"
+    },
+    {
+        "EmployeeID": "vdlOfgRHEuCrGSvaJzbHPIPKloaVSMmx",
+        "FirstName": "FirstName14",
+        "LastName": "LastName14",
+        "Age": 12061,
+        "DateOfHire": "/Date(279900368000)/",
+        "CareerLevel": "14",
+        "CurrentProject": "CurrentProject14"
+    },
+    {
+        "EmployeeID": "EKHFIzgLYCIqBLWPWHAlfFiKZZZLotfZ",
+        "FirstName": "FirstName15",
+        "LastName": "LastName15",
+        "Age": 18527,
+        "DateOfHire": "/Date(233899518000)/",
+        "CareerLevel": "15",
+        "CurrentProject": "CurrentProject15"
+    },
+    {
+        "EmployeeID": "OuMQsaSyelqzKVnofgxhjxvynkblObSv",
+        "FirstName": "FirstName16",
+        "LastName": "LastName16",
+        "Age": 5863,
+        "DateOfHire": "/Date(592296801000)/",
+        "CareerLevel": "16",
+        "CurrentProject": "CurrentProject16"
+    },
+    {
+        "EmployeeID": "MkwIDYIKDEUrQJHogMWBQBtQPyOksfAH",
+        "FirstName": "FirstName17",
+        "LastName": "LastName17",
+        "Age": 20586,
+        "DateOfHire": "/Date(639502131000)/",
+        "CareerLevel": "17",
+        "CurrentProject": "CurrentProject17"
+    },
+    {
+        "EmployeeID": "WvtgKcGTudmtwWWpegQLgOYSVMsLCPPh",
+        "FirstName": "FirstName18",
+        "LastName": "LastName18",
+        "Age": 17838,
+        "DateOfHire": "/Date(761836740000)/",
+        "CareerLevel": "18",
+        "CurrentProject": "CurrentProject18"
+    },
+    {
+        "EmployeeID": "tMhPiZyziOmjyCGuEwleTMYCXBSNuDfw",
+        "FirstName": "FirstName19",
+        "LastName": "LastName19",
+        "Age": 10587,
+        "DateOfHire": "/Date(321966704000)/",
+        "CareerLevel": "19",
+        "CurrentProject": "CurrentProject19"
+    },
+    {
+        "EmployeeID": "tPocZbBKLjBnwYOzDJMJshKoQBPOPKpg",
+        "FirstName": "FirstName20",
+        "LastName": "LastName20",
+        "Age": 8114,
+        "DateOfHire": "/Date(452913046000)/",
+        "CareerLevel": "20",
+        "CurrentProject": "CurrentProject20"
+    }
+]
