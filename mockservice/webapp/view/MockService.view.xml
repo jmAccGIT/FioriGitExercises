@@ -1,0 +1,40 @@
+<mvc:View controllerName="sapips.training.mockservice.controller.MockService" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <Panel id="idPanel1" headerText="Aggregation Binding" class="sapUiResponsiveMargin" width="auto">
+            <List items="{ProductsModel>/Products}" mode="SingleSelectMaster" selectionChange="onSelectProduct">
+                <items>
+                    <ObjectListItem title="{ProductsModel>ProductName}"
+                        number="{ parts: [ {path: 'ProductsModel>UnitPrice'}, 
+                                                {path: 'i18n>CurrencyCode'} ], 
+                                                type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }" numberUnit="{i18n>CurrencyCode}">
+                        <ObjectAttribute text="{ProductsModel>QuantityPerUnit}" />
+                        <ObjectAttribute title="{i18n>currStockValue}"
+                            text="{ parts: [ {path: 'ProductsModel>UnitPrice'}, 
+                                                   {path: 'ProductsModel>UnitsInStock'}, 
+                                                   {path: 'i18n>CurrencyCode'} ], formatter: '.formatter.formatStockValue' }" />
+                    </ObjectListItem>
+                </items>
+            </List>
+        </Panel>
+        <Panel id="idPanel2" headerText="Product Details" class="sapUiResponsiveMargin" width="auto">
+            <f:SimpleForm id="idProductDetails">
+                <f:content>
+                    <Label text="{i18n>ProductId}" />
+                    <Input value="{ProductsModel>ProductID}" />
+                    <Label text="{i18n>ProductName}" />
+                    <Input value="{ProductsModel>ProductName}" />
+                    <Label text="{i18n>QuantityPerUnit}" />
+                    <Input value="{ProductsModel>QuantityPerUnit}" />
+                    <Label text="{i18n>UnitPrice}" />
+                    <Input value="{ProductsModel>UnitPrice}" />
+                    <Label text="{i18n>UnitsInStock}" />
+                    <Input value="{ProductsModel>UnitsInStock}" />
+                    <Label text="{i18n>Discontinued}" />
+                    <Input value="{ProductsModel>Discontinued}" />
+                    <Button id="addBtn" text="Add Product" icon="sap-icon://add" press="onCreate" />
+                </f:content>
+            </f:SimpleForm>
+        </Panel>
+    </Page>
+</mvc:View>
