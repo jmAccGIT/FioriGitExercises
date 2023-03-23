@@ -1,7 +1,63 @@
-<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeList"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="123">
-        <Text text="1234"/>
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeDetail" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+    <Page id="idDetailPage" title="{i18n>empDetail}" showNavButton="true" navButtonPress="onNavBack"
+        class="sapUiResponsivePadding--header">
+        <content>
+            <ObjectHeader title="{FirstName} {LastName}" backgroundDesign="Solid">
+                <attributes>
+                    <ObjectAttribute title="{i18n>careerLevel}" text="{CareerLevel}" />
+                </attributes>
+            </ObjectHeader>
+            <IconTabBar class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter key="info" text="{i18n>empInfo}">
+                        <f:SimpleForm title="{i18n>empInfo}">
+                            <f:content>
+                                <Label text="{i18n>empID}" />
+                                <Text text="{EmployeeID}" />
+                                <Label text="{i18n>firstName}" />
+                                <Text text="{FirstName}" />
+                                <Label text="{i18n>lastName}" />
+                                <Text text="{LastName}" />
+                                <Label text="{i18n>age}" />
+                                <Text text="{Age}" />
+                                <Label text="{i18n>dateOfHire}" />
+                                <Text text="{DateHire}" />
+                                <Label text="{i18n>careerLevel}" />
+                                <Text text="{CareerLevel}" />
+                                <Label text="{i18n>currProject}" />
+                                <Text text="{CurrentProject/}" />
+                            </f:content>
+                        </f:SimpleForm>
+                    </IconTabFilter>
+                    <IconTabFilter key="skills" text="{i18n>skills}">
+                        <f:SimpleForm title="{i18n>skills}">
+                            <f:content>
+                                <Table id="skillsTab" inset="true" width="auto">
+                                    <columns>
+                                        <Column width="auto">
+                                            <Text text="{i18n>skill}" />
+                                        </Column>
+                                        <Column width="auto">
+                                            <Text text="{i18n>proficiency}" />
+                                        </Column>
+                                    </columns>
+                                    <items items="{/Skill}">
+                                        <ColumnListItem>
+                                            <cells>
+                                                <Text text="{SkillID}" />
+                                            </cells>
+                                            <cells>
+                                                <Text text="{Proficiency}" />
+                                            </cells>
+                                        </ColumnListItem>
+                                    </items>
+                                </Table>
+                            </f:content>
+                        </f:SimpleForm>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
     </Page>
 </mvc:View>

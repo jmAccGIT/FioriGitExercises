@@ -15,12 +15,12 @@
                     <Title text="Employees" level="H2"/>
                     <ToolbarSpacer/>
                     <SearchField search="onSearch" width="17.5rem"/>
-                    <Button
+                    <!-- <Button
                             tooltip="Filter"
                             icon="sap-icon://filter"
-                            press="handleFilterButtonPressed"/>                 
-                    <Button id="addEmployee" text="Add"/>
-                    <Button id="deleteEmployee" type="Reject" text="Delete"  enabled="false"/>                    
+                            press="handleFilterButtonPressed"/>                  -->
+                    <Button id="addEmployee" text="Add" press="onAddItemPress"/>
+                    <Button id="deleteEmployee" type="Reject" text="Delete" press="onDelItemPress"/>                    
                 </OverflowToolbar>
             </headerToolbar>    
             <columns>
@@ -30,19 +30,19 @@
                 <Column demandPopin="true">
                     <Text text="{i18n>firstName}"/>
                 </Column>
-                <Column width="auto" demandPopin="true">
+                <Column>
                     <Text text="{i18n>lastName}"/>
                 </Column>
-                <Column width="auto" demandPopin="true">
+                <Column>
                     <Text text="{i18n>age}"/>
                 </Column>
-                <Column width="auto" demandPopin="true">
+                <Column>
                     <Text text="{i18n>dateOfHire}"/>
                 </Column>
-                <Column width="auto" demandPopin="true">
+                <Column>
                     <Text text="{i18n>careerLevel}"/>
                 </Column>
-                <Column width="auto" demandPopin="true">
+                <Column>
                     <Text text="{i18n>currProject}"/>
                 </Column>
             </columns>
@@ -61,7 +61,7 @@
                         <Text text="{Age}" />
                     </cells>
                     <cells>
-                        <Text text="{DateOfHire}" />
+                        <Text text="{DateHire}" />
                     </cells>
                     <cells>
                         <Text text="{CareerLevel}" />

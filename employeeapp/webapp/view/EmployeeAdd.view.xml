@@ -1,0 +1,93 @@
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeAdd" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" 
+    xmlns:f="sap.ui.layout.form" 
+    xmlns:c="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="addPage" title="{i18n>addTitle}" showNavButton="true" navButtonPress="onNavBack"
+        class="sapUiResponsivePadding--header">
+        <Panel id="employeeDetail" class="sapUiResponsiveMargin" width="auto">
+            <f:SimpleForm title="{i18n>createRec}" class="sapUiResponsiveMargin" width="auto">
+                <f:content>
+                    <Label text="{i18n>empID}" />
+                    <Input enabled="false" width="auto" />
+                    <Label text="{i18n>firstName}" />
+                    <Input maxLength="40" required="true" placeholder="{i18n>pleaseEnterValue}" />
+                    <Label text="{i18n>lastName}" />
+                    <Input maxLength="40" required="true" placeholder="{i18n>pleaseEnterValue}" />
+                    <Label text="{i18n>age}" />
+                    <Input type="Number" required="true" placeholder="{i18n>pleaseEnterValue}" />
+                    <Label text="{i18n>dateOfHire}" />
+                    <DatePicker id="DP1" placeholder="Enter Date" change="handleChange" required="true"/>
+                    <Label text="{i18n>careerLevel}" />
+                    <Select required="true"
+                            wrapItemsText="true"
+                            items="{
+                                path: '/CareerList',
+                                sorter: { path: 'CareerLevel' }
+                            }">
+                        <c:Item key="{CareerId}" text="{CareerLevel}" />
+                    </Select>
+                    <Label text="{i18n>currProject}" />
+                    <Select required="true"
+                            wrapItemsText="true"
+                            items="{
+                                path: '/ProjectList',
+                                sorter: { path: 'ProjectName' }
+                            }">
+                        <c:Item key="{ProjectID}" text="{ProjectName}" />
+                    </Select>
+                </f:content>
+            </f:SimpleForm>
+        </Panel>
+        <Panel id="skillDetail" class="sapUiResponsiveMargin" width="auto">
+            <f:SimpleForm class="sapUiResponsiveMargin" width="auto">
+                <f:toolbar>
+                    <Toolbar id="toolBar1">
+                        <Title text="{i18n>skills}" />
+                        <ToolbarSpacer />
+                        <Button text="Add" type="Information" />
+                        <Button text="Delete" type="Reject" />
+                    </Toolbar>
+                </f:toolbar>
+                <f:content>
+                    <Label text="{i18n>skill}" align="right" />
+                    <Select required="true"
+                            wrapItemsText="true"
+                            items="{
+                                path: '/SkillList',
+                                sorter: { path: 'SkillName' }
+                            }">
+                        <c:Item key="{SkillId}" text="{SkillName}" />
+                    </Select>
+                    <Label text="{i18n>proficiency}" />
+                    <Select required="true"
+                            wrapItemsText="true"
+                            items="{
+                                path: '/ProficiencyList',
+                                sorter: { path: 'ProficiencyLevel' }
+                            }">
+                        <c:Item key="{ProficiencyId}" text="{ProficiencyLevel}" />
+                    </Select>
+                </f:content>
+
+            </f:SimpleForm>
+            <Panel id="idPanel3" class="sapUiResponsiveMargin" width="auto">
+                <List mode="SingleSelectMaster" selectionChange="onSelectProduct">
+                    <items>
+                        <ObjectListItem>
+                            <ObjectAttribute text="{SkillID}" />
+                            <ObjectAttribute title="{i18n>proficiency}" text="{Proficiency}" />
+                        </ObjectListItem>
+                    </items>
+                </List>
+            </Panel>
+        </Panel>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Save"   press="onSavePress" type="Emphasized" />
+                <Button text="Cancel" press="onCancelPress" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -99,6 +99,16 @@
           "target": [
             "TargetEmployeeList"
           ]
+        },
+        {
+          "name":"RouteDetail",
+          "pattern":"RouteDetail/{EmployeeID1}",
+          "target":["TargetEmployeeDetail"]
+        },
+        {
+          "name":"RouteAdd",
+          "pattern":"RouteAdd",
+          "target":["TargetAddEmployee"]
         }
       ],
       "targets": {
@@ -108,6 +118,14 @@
           "clearControlAggregation": false,
           "viewId": "EmployeeList",
           "viewName": "EmployeeList"
+        },
+        "TargetEmployeeDetail":{
+          "viewId":"EmployeeDetail",
+          "viewName":"EmployeeDetail"
+        },
+        "TargetAddEmployee":{
+          "viewId":"EmployeeAdd",
+          "viewName":"EmployeeAdd"
         }
       }
     },
