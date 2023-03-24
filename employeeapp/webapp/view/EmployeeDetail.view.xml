@@ -14,7 +14,7 @@
                         <f:SimpleForm title="{i18n>empInfo}">
                             <f:content>
                                 <Label text="{i18n>empID}" />
-                                <Text text="{EmployeeID}" />
+                                <Text id="empID" text="{EmployeeID}" />
                                 <Label text="{i18n>firstName}" />
                                 <Text text="{FirstName}" />
                                 <Label text="{i18n>lastName}" />
@@ -59,5 +59,12 @@
                 </items>
             </IconTabBar>
         </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Edit" press="onEditPress" type="Emphasized" />
+                <Button text="Cancel" press="onCancelPress" />
+            </Toolbar>
+        </footer>
     </Page>
 </mvc:View>

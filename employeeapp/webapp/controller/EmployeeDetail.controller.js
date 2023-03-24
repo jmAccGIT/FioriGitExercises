@@ -18,33 +18,35 @@ sap.ui.define([
             _onObjectMatched: function (oEvent) {                
                 var sEmployee = oEvent.getParameter("arguments").EmployeeID1;
                 var oView = this.getView();
-                oView.bindElement({
-                    path: "/Employee('" + sEmployee + "')",
-                    events: {
-                        change: this._onBindingChange.bind(this),
-                        dataRequested: function(oEvent) {
-                            oView.setBusy(true);
-                        },
-                        dataReceived: function(oEvent) {
-                            oView.setBusy(false);
-                        }
-                    }
-                });
+                oView.bindElement("/Employee('" + sEmployee + "')");
+                // oView.bindElement({
+                //     path: "/Employee('" + sEmployee + "')",
+                //     events: {
+                //         change: this._onBindingChange.bind(this),
+                //         dataRequested: function(oEvent) {
+                //             oView.setBusy(true);
+                //         },
+                //         dataReceived: function(oEvent) {
+                //             oView.setBusy(false);
+                //         }
+                //     }
+                // });
 
                 //bind skill data to skill tab
                 var oSkillView = this.getView().byId("skillsTab");
-                oSkillView.bindElement({
-                    path: "/Skill('" + sEmployee + "')",
-                    events: {
-                        change: this._onBindingChange.bind(this),
-                        dataRequested: function(oEvent) {
-                            oSkillView.setBusy(true);
-                        },
-                        dataReceived: function(oEvent) {
-                            oSkillView.setBusy(false);
-                        }
-                    }
-                });
+                oSkillView.bindElement("/Skill('" + sEmployee + "')");
+                // oSkillView.bindElement({
+                //     path: "/Skill('" + sEmployee + "')",
+                //     events: {
+                //         change: this._onBindingChange.bind(this),
+                //         dataRequested: function(oEvent) {
+                //             oSkillView.setBusy(true);
+                //         },
+                //         dataReceived: function(oEvent) {
+                //             oSkillView.setBusy(false);
+                //         }
+                //     }
+                // });
             },
             _onBindingChange: function(oEvent) {
                 var oElementBinding = this.getView().getElementBinding();
@@ -52,6 +54,18 @@ sap.ui.define([
                 if (oElementBinding && !oElementBinding.getBoundContext()) {
                     this.getRouter().getTargets().display("notFound");
                 }
+            },
+
+            onEditPress:function(oEvent){
+                var sEmployee = this.getView().byId("empID").getBindingContext().getObject().EmployeeID;
+                var oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("RouteEdit",{
+                    EmployeeID1: sEmployee
+                });
+            },
+
+            onCancelPress:function(){
+                this.onNavBack();
             },
 
             //When triggered, when back button is pressed. Triggers navigation back to previous page.

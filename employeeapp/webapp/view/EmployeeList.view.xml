@@ -14,11 +14,7 @@
                 <OverflowToolbar>
                     <Title text="Employees" level="H2"/>
                     <ToolbarSpacer/>
-                    <SearchField search="onSearch" width="17.5rem"/>
-                    <!-- <Button
-                            tooltip="Filter"
-                            icon="sap-icon://filter"
-                            press="handleFilterButtonPressed"/>                  -->
+                    <SearchField search="onSearch" width="17.5rem"/>             
                     <Button id="addEmployee" text="Add" press="onAddItemPress"/>
                     <Button id="deleteEmployee" type="Reject" text="Delete" press="onDelItemPress"/>                    
                 </OverflowToolbar>

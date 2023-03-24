@@ -109,6 +109,11 @@
           "name":"RouteAdd",
           "pattern":"RouteAdd",
           "target":["TargetAddEmployee"]
+        },
+        {
+          "name":"RouteEdit",
+          "pattern":"RouteEdit/{EmployeeID1}",
+          "target":["TargetEditEmployee"]
         }
       ],
       "targets": {
@@ -126,6 +131,10 @@
         "TargetAddEmployee":{
           "viewId":"EmployeeAdd",
           "viewName":"EmployeeAdd"
+        },
+        "TargetEditEmployee":{
+          "viewId":"EmployeeEdit",
+          "viewName":"EmployeeEdit"
         }
       }
     },

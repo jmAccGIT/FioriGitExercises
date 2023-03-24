@@ -1,51 +1,38 @@
-<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeAdd" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="sapips.training.employeeapp.controller.EmployeeEdit" xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:c="sap.ui.core" xmlns="sap.m">
-    <Page id="addPage" title="{i18n>addTitle}" showNavButton="true" navButtonPress="onNavBack"
+    <Page id="addPage" title="{i18n>editTitle}" showNavButton="true" navButtonPress="onNavBack"
         class="sapUiResponsivePadding--header">
         <Panel id="employeeDetail" class="sapUiResponsiveMargin" width="auto">
-            <f:SimpleForm title="{i18n>createRec}" class="sapUiResponsiveMargin" width="auto">
-                <f:content>
+            <f:SimpleForm title="{i18n>editRec}" class="sapUiResponsiveMargin" width="auto">
+                <f:content item="{/Employee}">
                     <Label text="{i18n>empID}" />
-                    <Input id="idEID" enabled="false" />
+                    <Input id="idEID" value="{EmployeeID}" enabled="false" width="auto" />
                     <Label text="{i18n>firstName}" />
-                    <Input id="idFirstName" maxLength="40" 
-                           required="true" 
-                           placeholder="{i18n>pleaseEnterValue}" 
-                           valueStateText="{i18n>errFieldValStateText}" />
+                    <Input id="idFirstName" value="{FirstName}" maxLength="40" required="true" placeholder="{i18n>pleaseEnterValue}" />
                     <Label text="{i18n>lastName}" />
-                    <Input id="idLastName" 
-                            maxLength="40" 
-                            required="true" 
-                            placeholder="{i18n>pleaseEnterValue}" 
-                            valueStateText="{i18n>errFieldValStateText}" />
+                    <Input id="idLastName" value="{LastName}" maxLength="40" required="true" placeholder="{i18n>pleaseEnterValue}" />
                     <Label text="{i18n>age}" />
-                    <Input id="idAge" 
-                            type="Number" 
-                            required="true" 
-                            placeholder="{i18n>pleaseEnterValue}" 
-                            valueStateText="{i18n>errFieldValStateText}" />
+                    <Input id="idAge" value="{Age}" type="Number" required="true" placeholder="{i18n>pleaseEnterValue}" />
                     <Label text="{i18n>dateOfHire}" />
-                    <DatePicker id="idDateHire" placeholder="Enter Date" change="handleChange" required="true" valueStateText="{i18n>errFieldValStateText}"/>
+                    <DatePicker value="{DateHire}" id="idDateHire" placeholder="Enter Date" change="handleChange" required="true" />
                     <Label text="{i18n>careerLevel}" />
-                    <Select id="idCl" required="true" 
-                            wrapItemsText="true" 
-                            valueStateText="{i18n>errFieldValStateText}"
-                            items="{
-                                path: '/CareerList',
-                                sorter: { path: 'CareerLevel' }
+                    <Select id="idCl"   
+                            selectedKey="{CareerLevel}"                         
+                            required="true" wrapItemsText="true" items="{
+                                path: '/CareerList',                               
+                                sorter: { path: 'CareerLevel' }                                
                             }">
                         <c:Item key="{CareerID}" text="{CareerLevel}" />
                     </Select>
                     <Label text="{i18n>currProject}" />
-                    <Select id="idPf" required="true" 
-                            valueStateText="{i18n>errFieldValStateText}"
-                            wrapItemsText="true" 
-                            items="{
+                    <Select id="idPf"
+                            selectedKey="{CurrentProject}"
+                            required="true" wrapItemsText="true" items="{
                                 path: '/ProjectList',
                                 sorter: { path: 'ProjectName' }
                             }">
                         <c:Item key="{ProjectID}" text="{ProjectName}" />
-                    </Select>
+                    </Select>                    
                 </f:content>
             </f:SimpleForm>
         </Panel>
@@ -67,7 +54,7 @@
                             <Text text="{i18n>proficiency}" />
                         </Column>
                     </columns>
-                    <items items="{/SkillModel}">
+                    <items items="{/Skill}">
                         <ColumnListItem>
                             <cells>
                                 <Text text="{SkillID}" />
@@ -82,7 +69,7 @@
         <footer>
             <Toolbar>
                 <ToolbarSpacer />
-                <Button text="Save" press="onSavePress" type="Emphasized" />
+                <Button text="Update" press="onUpdPress" type="Emphasized" />
                 <Button text="Cancel" press="onCancelPress" />
             </Toolbar>
         </footer>
